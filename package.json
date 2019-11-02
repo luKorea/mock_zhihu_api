@@ -1,0 +1,35 @@
+{
+  "name": "mock_zhihu_api",
+  "version": "1.0.0",
+  "description": "仿知乎API",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app",
+    "build": "cross-env NODE_ENV=production node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luKorea/mock_zhihu_api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luKorea/mock_zhihu_api/issues"
+  },
+  "homepage": "https://github.com/luKorea/mock_zhihu_api#readme",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-json-error": "^3.1.2",
+    "koa-parameter": "^3.0.1",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.7.7"
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "nodemon": "^1.19.4"
+  }
+}
