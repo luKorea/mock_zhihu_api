@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传</title>
+</head>
+<body>
+<form action="/upload" enctype="multipart/form-data" method="post">
+<!--  accept 文件上传支持格式  -->
+    <input type="file" name="file" accept="image/*">
+    <button type="submit">图片上传</button>
+</form>
+</body>
+</html>

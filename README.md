@@ -1,16 +1,11 @@
-# mock_zhihu_api
-仿知乎API
-## 运用koa搭建restFulAPI
-<hr>
-
-```
-1. npm i koa
-2. npm i koa-bodyParser
-3. npm i koa-router
-4. npm i koa-json-error
-5. npm i cross-env -D
-```
-## 使用 koa-json-error 处理错误
+# 仿知乎API
+#### 1. 使用 koa 搭建服务器
+> npm i koa
+#### 2. 使用 koa-bodyParser,解析body中的数据(只支持form，json数据)
+> npm i koa-bodyParser
+#### 3. 使用 koa-router 进行路由配置
+> npm i koa-router
+#### 4. 使用 koa-json-error 处理错误
 > npm i koa-json-error
 ```js
 app.use(async (ctx, next) => {
@@ -25,7 +20,7 @@ app.use(async (ctx, next) => {
   }
 ```
 
-## 配置不同环境运行不同命令
+#### 5. 使用 cross-env 配置不同环境运行不同命令
 ```json
 {
       "start": "nodemon app",
@@ -33,12 +28,12 @@ app.use(async (ctx, next) => {
 }
 ```
 
-## 使用koa-parameter 校验参数
+#### 6. 使用koa-parameter 校验参数
 > npm i koa-parameter
 
-## 使用mongoose连接mongodb
+#### 7. 使用mongoose连接mongodb
 > npm i mongoose
-## 使用 jsonwebtoken 进行用户权限认定
+#### 8. 使用 jsonWebToken 进行用户权限认定
 > npm i jsonwebtoken
 ```js
 const jwt = require('jsonwebtoken');
@@ -46,3 +41,15 @@ const jwt = require('jsonwebtoken');
 const token = jwt.sign({name: 'korea'}, 'secret'); 
 jwt.verify(token, 'secret');
 ```
+#### 9. 自动化脚本，实现全局配置token
+```js
+    var jsonData = pm.response.json();
+    pm.globals.set("token", jsonData.token);
+```
+#### 10. 使用koa-jwt进行用户认证授权
+> npm i koa-jwt
+#### 11. 使用koa-body获取用户上传的文件(支持多种MIME),删除 koa-bodyParser
+> npm i koa-body
+> npm uninstall koa-bodyParser 
+#### 12. 使用koa-static生成图片链接
+> npm i koa-static

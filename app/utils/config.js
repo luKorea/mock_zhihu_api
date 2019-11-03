@@ -1,4 +1,5 @@
 module.exports = {
     PORT: 8080,
-    CONNECT: 'mongodb://localhost:27017/zhihu'
+    CONNECT: 'mongodb://localhost:27017/zhihu',
+    SECRET: 'korea-demo'
 };
