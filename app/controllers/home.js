@@ -6,9 +6,9 @@ const path = require('path');
 
 class HomeController {
     async index(ctx) {
-        ctx.body = '这是首页';
-    }
-    // TODO 文件上传
+            ctx.body = '这是首页';
+        }
+        // TODO 文件上传
     async upload(ctx) {
         const file = await ctx.request.files.file;
         // 图片路径生成
